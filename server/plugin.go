@@ -211,7 +211,6 @@ func (p *Plugin) startMeeting(user *model.User, channel *model.Channel, meetingI
 		if meetingID != "" {
 			meetingID += "-"
 		}
-		meetingID += randomString(LETTERS, 20)
 	}
 	meetingPersonal := false
 	defaultMeetingTopic := p.b.LocalizeDefaultMessage(l, &i18n.Message{
