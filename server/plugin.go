@@ -208,9 +208,6 @@ func (p *Plugin) startMeeting(user *model.User, channel *model.Channel, meetingI
 	l := p.b.GetServerLocalizer()
 	if meetingID == "" {
 		meetingID = encodeJitsiMeetingID(meetingTopic)
-		if meetingID != "" {
-			meetingID += "-"
-		}
 	}
 	meetingPersonal := false
 	defaultMeetingTopic := p.b.LocalizeDefaultMessage(l, &i18n.Message{
