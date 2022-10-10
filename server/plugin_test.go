@@ -91,7 +91,7 @@ func TestStartMeeting(t *testing.T) {
 
 		meetingID, err := p.startMeeting(&testUser, &testChannel, "", "Test topic", false, "")
 		require.Nil(t, err)
-		require.Regexp(t, "^Test-topic-", meetingID)
+		require.Regexp(t, "^Test-topic", meetingID)
 	})
 
 	t.Run("start meeting without topic and with id", func(t *testing.T) {
